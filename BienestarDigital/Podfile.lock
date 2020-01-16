@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 06160ba715c2901c7844621c78b2aebc4ef77fa7
+PODS:
+  - CKCircleMenuView (0.4.0)
+
+DEPENDENCIES:
+  - CKCircleMenuView
+
+SPEC REPOS:
+  trunk:
+    - CKCircleMenuView
+
+SPEC CHECKSUMS:
+  CKCircleMenuView: 581c3e55ba554b62abb3f1ffd6e7d116b96759d3
+
+PODFILE CHECKSUM: 0caf5261c219fbab8bb307cdca71f400e3e96a7f
 
 COCOAPODS: 1.8.4

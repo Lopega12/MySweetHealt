@@ -6,5 +6,5 @@ target 'BienestarDigital' do
   use_frameworks!
 
   # Pods for BienestarDigital
-
+  pod 'CKCircleMenuView'
 end

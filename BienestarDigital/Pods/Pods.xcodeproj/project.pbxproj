@@ -7,59 +7,135 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2739BF46306D31F89CBE563D170C546D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		349B19339D7450B9F46130F72FB589B5 /* Pods-BienestarDigital-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CC37AA5480396D549F3FDE8D0FF3C0C3 /* Pods-BienestarDigital-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C8A7FAC4BC4CDB3B28F84A82CDC8E5C /* Pods-BienestarDigital-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A549A2BF47728881E01A3B53C5D9CB75 /* Pods-BienestarDigital-dummy.m */; };
+		61081437D0D5CD44207DA24E5630B34F /* CKCircleMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D633690283C3EAA2FC5086F841350B2E /* CKCircleMenuView.m */; };
+		68EDD0A6CE86F01330E70EA341D71EED /* Pods-BienestarDigital-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9828748E939F3A8E6A0EFDAFC6D7DB11 /* Pods-BienestarDigital-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BCF11929417BF66B596AAEF470FA756 /* Pods-BienestarDigital-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A727AD73BE1CCAF24FD2FB53F0EAA7 /* Pods-BienestarDigital-dummy.m */; };
+		83B16A4005A2A285BCE630D2D89F5771 /* CKCircleMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A8B94CDA67488751D4849C84D0E46F1 /* CKCircleMenuView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FDE16CA760859542888F07B8169C838 /* CKCircleMenuView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7B2EBD9E34C7BFD6669535854109B5 /* CKCircleMenuView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA27C37CA1431B8623FFD226A69A9793 /* CKCircleMenuView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D891D3F9495373C1AC820CBEA8FBA399 /* CKCircleMenuView-dummy.m */; };
+		B532BB2E2EBF5753A1E12B15B956E952 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		CD62D1268A738BC697687598C19F47D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F064A04CA5D16164C5D889B5F63B3935 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91FB5A1392034E70D03EE16B23B6BE2D;
+			remoteInfo = CKCircleMenuView;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		239530B5C475906F3D7633971EA63581 /* Pods-BienestarDigital.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BienestarDigital.modulemap"; sourceTree = "<group>"; };
-		31BCD656E40D1EEE651A101A73CECEE9 /* Pods-BienestarDigital.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BienestarDigital.release.xcconfig"; sourceTree = "<group>"; };
+		22F8F3F8145C2B27413C66DE810BB006 /* Pods-BienestarDigital-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BienestarDigital-acknowledgements.plist"; sourceTree = "<group>"; };
+		30F90569AE4A15B6DD63A6F549D6D558 /* Pods-BienestarDigital.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BienestarDigital.modulemap"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3349F4A328AA13AD64CC53F1B322E172 /* Pods-BienestarDigital-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BienestarDigital-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5A9056195381D2640D9F773D3189ACD6 /* Pods-BienestarDigital-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BienestarDigital-Info.plist"; sourceTree = "<group>"; };
-		91343DEC0FA297C31C4D5AE8E4B8FAC7 /* Pods-BienestarDigital-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BienestarDigital-acknowledgements.plist"; sourceTree = "<group>"; };
+		3B7ED3D6AC225209FB6A8962A2F770E9 /* Pods-BienestarDigital.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BienestarDigital.debug.xcconfig"; sourceTree = "<group>"; };
+		40A727AD73BE1CCAF24FD2FB53F0EAA7 /* Pods-BienestarDigital-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BienestarDigital-dummy.m"; sourceTree = "<group>"; };
+		7B496937B86B10ADD3890A9AD8874341 /* Pods-BienestarDigital-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BienestarDigital-acknowledgements.markdown"; sourceTree = "<group>"; };
+		834C9FFDC7917BB7D8D9CEEB8F6AC83B /* CKCircleMenuView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CKCircleMenuView.modulemap; sourceTree = "<group>"; };
+		8A8B94CDA67488751D4849C84D0E46F1 /* CKCircleMenuView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKCircleMenuView.h; path = CKCircleMenuView/CKCircleMenuView.h; sourceTree = "<group>"; };
+		90768B5F0BE001B55B44A7A5D497193E /* CKCircleMenuView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CKCircleMenuView-prefix.pch"; sourceTree = "<group>"; };
+		9828748E939F3A8E6A0EFDAFC6D7DB11 /* Pods-BienestarDigital-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BienestarDigital-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A549A2BF47728881E01A3B53C5D9CB75 /* Pods-BienestarDigital-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BienestarDigital-dummy.m"; sourceTree = "<group>"; };
-		A77E95584EA9E82DA49B573567BADB07 /* Pods-BienestarDigital.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BienestarDigital.debug.xcconfig"; sourceTree = "<group>"; };
+		AE6618EA91F0C3C98C335CEFC7FE27A2 /* Pods-BienestarDigital.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BienestarDigital.release.xcconfig"; sourceTree = "<group>"; };
 		B8C14DB0F12BB0B367EB41D86C434C25 /* Pods_BienestarDigital.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BienestarDigital.framework; path = "Pods-BienestarDigital.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC37AA5480396D549F3FDE8D0FF3C0C3 /* Pods-BienestarDigital-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BienestarDigital-umbrella.h"; sourceTree = "<group>"; };
+		CE7B2EBD9E34C7BFD6669535854109B5 /* CKCircleMenuView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CKCircleMenuView-umbrella.h"; sourceTree = "<group>"; };
+		D633690283C3EAA2FC5086F841350B2E /* CKCircleMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CKCircleMenuView.m; path = CKCircleMenuView/CKCircleMenuView.m; sourceTree = "<group>"; };
+		D72EF9033B0DC3EC1A4EFFAC7EB28980 /* CKCircleMenuView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CKCircleMenuView-Info.plist"; sourceTree = "<group>"; };
+		D891D3F9495373C1AC820CBEA8FBA399 /* CKCircleMenuView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CKCircleMenuView-dummy.m"; sourceTree = "<group>"; };
+		E2996C32C39E9EF4873C3CB5D637A26C /* CKCircleMenuView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CKCircleMenuView.framework; path = CKCircleMenuView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D9AEFAFF6775824560167D5CE8401B /* CKCircleMenuView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CKCircleMenuView.xcconfig; sourceTree = "<group>"; };
+		F0EC3F8C216E8106B237F57786820C1E /* Pods-BienestarDigital-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BienestarDigital-Info.plist"; sourceTree = "<group>"; };
+		F62A4DD975F9775040E87622359CC3A4 /* Pods-BienestarDigital-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BienestarDigital-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CC139370A14F36A3B56179741523FE69 /* Frameworks */ = {
+		2FB15394505CDC51052E64A136B1DE4B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2739BF46306D31F89CBE563D170C546D /* Foundation.framework in Frameworks */,
+				B532BB2E2EBF5753A1E12B15B956E952 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47A8C6D95EDCD12893B9D1240DD2BDF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD62D1268A738BC697687598C19F47D7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D626CFB122AFFA4EEA2905CCA503394 /* Pods-BienestarDigital */ = {
+		1BE853A9EB819AD0BF0C4CDF623F09B7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				239530B5C475906F3D7633971EA63581 /* Pods-BienestarDigital.modulemap */,
-				3349F4A328AA13AD64CC53F1B322E172 /* Pods-BienestarDigital-acknowledgements.markdown */,
-				91343DEC0FA297C31C4D5AE8E4B8FAC7 /* Pods-BienestarDigital-acknowledgements.plist */,
-				A549A2BF47728881E01A3B53C5D9CB75 /* Pods-BienestarDigital-dummy.m */,
-				5A9056195381D2640D9F773D3189ACD6 /* Pods-BienestarDigital-Info.plist */,
-				CC37AA5480396D549F3FDE8D0FF3C0C3 /* Pods-BienestarDigital-umbrella.h */,
-				A77E95584EA9E82DA49B573567BADB07 /* Pods-BienestarDigital.debug.xcconfig */,
-				31BCD656E40D1EEE651A101A73CECEE9 /* Pods-BienestarDigital.release.xcconfig */,
+				2E88E0A7B9936A3343C2E363CD4A9B4E /* CKCircleMenuView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2E88E0A7B9936A3343C2E363CD4A9B4E /* CKCircleMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				8A8B94CDA67488751D4849C84D0E46F1 /* CKCircleMenuView.h */,
+				D633690283C3EAA2FC5086F841350B2E /* CKCircleMenuView.m */,
+				4CC72788AF85D885523F43E5E08EDDD4 /* Support Files */,
+			);
+			name = CKCircleMenuView;
+			path = CKCircleMenuView;
+			sourceTree = "<group>";
+		};
+		40C038250C48A5A53ABBBC9C1C23AB75 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				488AEA715EE6230DD922F96787FD8CA0 /* Pods-BienestarDigital */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		488AEA715EE6230DD922F96787FD8CA0 /* Pods-BienestarDigital */ = {
+			isa = PBXGroup;
+			children = (
+				30F90569AE4A15B6DD63A6F549D6D558 /* Pods-BienestarDigital.modulemap */,
+				7B496937B86B10ADD3890A9AD8874341 /* Pods-BienestarDigital-acknowledgements.markdown */,
+				22F8F3F8145C2B27413C66DE810BB006 /* Pods-BienestarDigital-acknowledgements.plist */,
+				40A727AD73BE1CCAF24FD2FB53F0EAA7 /* Pods-BienestarDigital-dummy.m */,
+				F62A4DD975F9775040E87622359CC3A4 /* Pods-BienestarDigital-frameworks.sh */,
+				F0EC3F8C216E8106B237F57786820C1E /* Pods-BienestarDigital-Info.plist */,
+				9828748E939F3A8E6A0EFDAFC6D7DB11 /* Pods-BienestarDigital-umbrella.h */,
+				3B7ED3D6AC225209FB6A8962A2F770E9 /* Pods-BienestarDigital.debug.xcconfig */,
+				AE6618EA91F0C3C98C335CEFC7FE27A2 /* Pods-BienestarDigital.release.xcconfig */,
 			);
 			name = "Pods-BienestarDigital";
 			path = "Target Support Files/Pods-BienestarDigital";
 			sourceTree = "<group>";
 		};
-		92E59C43827A8FAC9452A3560D434F72 /* Targets Support Files */ = {
+		4CC72788AF85D885523F43E5E08EDDD4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4D626CFB122AFFA4EEA2905CCA503394 /* Pods-BienestarDigital */,
+				834C9FFDC7917BB7D8D9CEEB8F6AC83B /* CKCircleMenuView.modulemap */,
+				E5D9AEFAFF6775824560167D5CE8401B /* CKCircleMenuView.xcconfig */,
+				D891D3F9495373C1AC820CBEA8FBA399 /* CKCircleMenuView-dummy.m */,
+				D72EF9033B0DC3EC1A4EFFAC7EB28980 /* CKCircleMenuView-Info.plist */,
+				90768B5F0BE001B55B44A7A5D497193E /* CKCircleMenuView-prefix.pch */,
+				CE7B2EBD9E34C7BFD6669535854109B5 /* CKCircleMenuView-umbrella.h */,
 			);
-			name = "Targets Support Files";
+			name = "Support Files";
+			path = "../Target Support Files/CKCircleMenuView";
+			sourceTree = "<group>";
+		};
+		8ED0C939999A4124A11B81B107E9A90F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2996C32C39E9EF4873C3CB5D637A26C /* CKCircleMenuView.framework */,
+				B8C14DB0F12BB0B367EB41D86C434C25 /* Pods_BienestarDigital.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -75,8 +151,9 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				F812102821826E56723B0ABC04521956 /* Products */,
-				92E59C43827A8FAC9452A3560D434F72 /* Targets Support Files */,
+				1BE853A9EB819AD0BF0C4CDF623F09B7 /* Pods */,
+				8ED0C939999A4124A11B81B107E9A90F /* Products */,
+				40C038250C48A5A53ABBBC9C1C23AB75 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,40 +165,60 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F812102821826E56723B0ABC04521956 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B8C14DB0F12BB0B367EB41D86C434C25 /* Pods_BienestarDigital.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		232BE15EA6305D9EDC00730217824B10 /* Headers */ = {
+		C14268F586981936BC71C23479EFB9AC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				349B19339D7450B9F46130F72FB589B5 /* Pods-BienestarDigital-umbrella.h in Headers */,
+				9FDE16CA760859542888F07B8169C838 /* CKCircleMenuView-umbrella.h in Headers */,
+				83B16A4005A2A285BCE630D2D89F5771 /* CKCircleMenuView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE44442F4E556A412599710C880AA69 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68EDD0A6CE86F01330E70EA341D71EED /* Pods-BienestarDigital-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E7AA192B5E9C4F6F7304D38FE2D4B51E /* Pods-BienestarDigital */ = {
+		91FB5A1392034E70D03EE16B23B6BE2D /* CKCircleMenuView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E06D903CE215E7EA04E6F69BCD5C5C2 /* Build configuration list for PBXNativeTarget "Pods-BienestarDigital" */;
+			buildConfigurationList = FD7A61892548DD2FC5FFBA30AC52A551 /* Build configuration list for PBXNativeTarget "CKCircleMenuView" */;
 			buildPhases = (
-				232BE15EA6305D9EDC00730217824B10 /* Headers */,
-				5E2F65E4A29D492250FC31743B313B42 /* Sources */,
-				CC139370A14F36A3B56179741523FE69 /* Frameworks */,
-				5F181EF141298BA4114BBF0BA64E0F0D /* Resources */,
+				C14268F586981936BC71C23479EFB9AC /* Headers */,
+				68B8CBBF6C1DEF9C38C06C0D37C182AC /* Sources */,
+				47A8C6D95EDCD12893B9D1240DD2BDF0 /* Frameworks */,
+				4BCA7D0814E0C58D1C6F1F905B4A02B7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			name = CKCircleMenuView;
+			productName = CKCircleMenuView;
+			productReference = E2996C32C39E9EF4873C3CB5D637A26C /* CKCircleMenuView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E7AA192B5E9C4F6F7304D38FE2D4B51E /* Pods-BienestarDigital */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1A10451AC04080582D0967BEEEFB2CB /* Build configuration list for PBXNativeTarget "Pods-BienestarDigital" */;
+			buildPhases = (
+				CCE44442F4E556A412599710C880AA69 /* Headers */,
+				157BC02D68547D0D3710A5595D2DC473 /* Sources */,
+				2FB15394505CDC51052E64A136B1DE4B /* Frameworks */,
+				E5F4EF459F8E209CA8E5CD1AB9C7911B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6C714025165D1E14A24243E674E74B1 /* PBXTargetDependency */,
 			);
 			name = "Pods-BienestarDigital";
 			productName = "Pods-BienestarDigital";
@@ -146,17 +243,25 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = F812102821826E56723B0ABC04521956 /* Products */;
+			productRefGroup = 8ED0C939999A4124A11B81B107E9A90F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				91FB5A1392034E70D03EE16B23B6BE2D /* CKCircleMenuView */,
 				E7AA192B5E9C4F6F7304D38FE2D4B51E /* Pods-BienestarDigital */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5F181EF141298BA4114BBF0BA64E0F0D /* Resources */ = {
+		4BCA7D0814E0C58D1C6F1F905B4A02B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5F4EF459F8E209CA8E5CD1AB9C7911B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,20 +271,73 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5E2F65E4A29D492250FC31743B313B42 /* Sources */ = {
+		157BC02D68547D0D3710A5595D2DC473 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C8A7FAC4BC4CDB3B28F84A82CDC8E5C /* Pods-BienestarDigital-dummy.m in Sources */,
+				6BCF11929417BF66B596AAEF470FA756 /* Pods-BienestarDigital-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B8CBBF6C1DEF9C38C06C0D37C182AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA27C37CA1431B8623FFD226A69A9793 /* CKCircleMenuView-dummy.m in Sources */,
+				61081437D0D5CD44207DA24E5630B34F /* CKCircleMenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C6C714025165D1E14A24243E674E74B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CKCircleMenuView;
+			target = 91FB5A1392034E70D03EE16B23B6BE2D /* CKCircleMenuView */;
+			targetProxy = F064A04CA5D16164C5D889B5F63B3935 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		18F265B82FB66729D70036C8FA992F06 /* Release */ = {
+		0EEAFCD230FC308039BA717DF734F704 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31BCD656E40D1EEE651A101A73CECEE9 /* Pods-BienestarDigital.release.xcconfig */;
+			baseConfigurationReference = E5D9AEFAFF6775824560167D5CE8401B /* CKCircleMenuView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CKCircleMenuView/CKCircleMenuView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CKCircleMenuView/CKCircleMenuView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CKCircleMenuView/CKCircleMenuView.modulemap";
+				PRODUCT_MODULE_NAME = CKCircleMenuView;
+				PRODUCT_NAME = CKCircleMenuView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6123F61F811096C4181F4ADACEB0C992 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B7ED3D6AC225209FB6A8962A2F770E9 /* Pods-BienestarDigital.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -210,11 +368,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -280,9 +437,45 @@
 			};
 			name = Debug;
 		};
-		ABFD0D066BEB3CF653785896779015FA /* Debug */ = {
+		CA3E5D4AABAEFBC0AF029ECC486AD7AD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A77E95584EA9E82DA49B573567BADB07 /* Pods-BienestarDigital.debug.xcconfig */;
+			baseConfigurationReference = E5D9AEFAFF6775824560167D5CE8401B /* CKCircleMenuView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CKCircleMenuView/CKCircleMenuView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CKCircleMenuView/CKCircleMenuView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CKCircleMenuView/CKCircleMenuView.modulemap";
+				PRODUCT_MODULE_NAME = CKCircleMenuView;
+				PRODUCT_NAME = CKCircleMenuView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D2B71C6EC76349FD8F6A25EF0FBF8D17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE6618EA91F0C3C98C335CEFC7FE27A2 /* Pods-BienestarDigital.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -313,10 +506,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -381,20 +575,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2E06D903CE215E7EA04E6F69BCD5C5C2 /* Build configuration list for PBXNativeTarget "Pods-BienestarDigital" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ABFD0D066BEB3CF653785896779015FA /* Debug */,
-				18F265B82FB66729D70036C8FA992F06 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */,
 				ECB437504DF805BD96CAABF97400B526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1A10451AC04080582D0967BEEEFB2CB /* Build configuration list for PBXNativeTarget "Pods-BienestarDigital" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6123F61F811096C4181F4ADACEB0C992 /* Debug */,
+				D2B71C6EC76349FD8F6A25EF0FBF8D17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD7A61892548DD2FC5FFBA30AC52A551 /* Build configuration list for PBXNativeTarget "CKCircleMenuView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EEAFCD230FC308039BA717DF734F704 /* Debug */,
+				CA3E5D4AABAEFBC0AF029ECC486AD7AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
