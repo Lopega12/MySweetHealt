@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import UIKit
+import CKCircleMenuView
+
+class ProfileController : UIViewController{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
