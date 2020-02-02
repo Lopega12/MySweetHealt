@@ -8,7 +8,20 @@
 
 import UIKit
 import CKCircleMenuView
-class ViewController: UIViewController, CKCircleMenuDelegate{
+class ViewController: UIViewController, CKCircleMenuDelegate, UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return apps.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "App", for: indexPath) as! AppsTableViewTableViewCell
+        let app = apps[indexPath.row]
+        cell.nameAppCell.text = app.name
+        cell.imageAppCell.image = UIImage(named: (app.image)!)
+        cell.timeAppCell.text = app.time
+        return cell
+    }
+    
 
     @IBOutlet weak var MenuButton: UIButton!
     var menuButtonItems = Array<UIImage>()
@@ -16,14 +29,26 @@ class ViewController: UIViewController, CKCircleMenuDelegate{
     var tPoint = CGPoint();
     var menuItemsLabel : [ String] = ["Home","Control","Stats","Perfil"]
     var circleMenuView = CKCircleMenuView()
+    
+    var apps : [TheApp] = []
+    
+    @IBOutlet weak var TableApps: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Data hardocded//
+        apps = dataHardcoded()
+        
+        self.TableApps.dataSource = self
+        self.TableApps.delegate = self
         tPoint = CGPoint(x:MenuButton.frame.midX, y: MenuButton.frame.midY)
         self.menuButtonItems.append(UIImage(named: "mobile-app")!)
         self.menuButtonItems.append(UIImage(named: "passage-of-time")!)
         self.menuButtonItems.append(UIImage(named: "growth")!)
         self.menuButtonItems.append(UIImage(named:  "contacts")!)
-        
+        /**
+                    Options Pod Circle Menu
+         */
         optionsMenu[CIRCLE_MENU_OPENING_DELAY]=0.1 as AnyObject
         optionsMenu[CIRCLE_MENU_MAX_ANGLE]=180.0 as AnyObject
         optionsMenu[CIRCLE_MENU_RADIUS]=105.0 as AnyObject
@@ -53,6 +78,20 @@ class ViewController: UIViewController, CKCircleMenuDelegate{
     
     func circleMenuActivatedButton(with anIndex: Int32) {
         //Aqui va el proceso de dirigir al usuario a una pantalla especifica//
+    }
+    func dataHardcoded()-> [TheApp]{
+        var apps : [TheApp] = []
+        apps.append(TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app"))
+         apps.append(TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app"))
+         apps.append(TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app"))
+         apps.append(TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app"))
+         apps.append(TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app"))
+         apps.append(TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app"))
+         apps.append(TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app"))
+         apps.append(TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app"))
+         apps.append(TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app"))
+        return apps
+        
     }
 
     

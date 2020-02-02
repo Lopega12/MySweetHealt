@@ -7,4 +7,5 @@ target 'BienestarDigital' do
 
   # Pods for BienestarDigital
   pod 'CKCircleMenuView'
+pod 'Alamofire', '~> 4.5'
 end
