@@ -12,8 +12,9 @@ class ApiMagnament{
     
     let urlBase = "http://localhost:8888/"
     
-    func getAllApps(){
+    func postApp(){
        
     }
+    
     
 }

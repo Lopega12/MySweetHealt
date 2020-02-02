@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class TheApp{
+class TheApp : Codable{
     var name: String!,image: String?
     var time: String!
     var latitude: Double!,lonigutde:Double!

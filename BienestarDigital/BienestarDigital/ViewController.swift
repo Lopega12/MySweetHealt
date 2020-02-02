@@ -32,10 +32,14 @@ class ViewController: UIViewController, CKCircleMenuDelegate, UITableViewDelegat
     
     var apps : [TheApp] = []
     
+    var path : URL?
+    var file : [TheApp] = []
     @IBOutlet weak var TableApps: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        file = setLocalDirectoryCSV()
+       // print(file.count)
         //Data hardocded//
         apps = dataHardcoded()
         
@@ -92,6 +96,28 @@ class ViewController: UIViewController, CKCircleMenuDelegate, UITableViewDelegat
          apps.append(TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app"))
         return apps
         
+    }
+    func setLocalDirectoryCSV()->[TheApp]{
+        let name = "usage.csv"
+        let folder = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        path = folder.first?.appendingPathComponent(name)
+        print(path!)
+        return loadDataFromFile()
+    }
+    func loadDataFromFile()->[TheApp]{
+        var file :[String] = []
+        let apps : [TheApp] = []
+        do {
+            let texto = try String(contentsOf: path!, encoding: .utf8)
+            file = texto.split(separator: "\n").map(String.init)
+            for line in file {
+               
+            }
+            //print("tamaño del fichero\(file.count)")
+        } catch {
+            print("Error al leer desde fichero")
+        }
+        return apps
     }
 
     
