@@ -22,4 +22,5 @@ class TheApp : Codable{
         self.time = time
         
     }
+
 }
