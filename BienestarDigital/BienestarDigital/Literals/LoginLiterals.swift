@@ -11,5 +11,6 @@ open class LoginLiterals{
     static var ButtonLogin = "Entrar"
     static var ButtonRecover = "Olvide la contraseña"
     static var ButtonRegistrar = "Registrarse"
-    
+    static var LabelUser = "Usuario"
+    static var LabelPass = "Contraseña"
 }
