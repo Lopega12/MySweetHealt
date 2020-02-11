@@ -39,21 +39,28 @@ class ViewController: UIViewController, CKCircleMenuDelegate, UITableViewDelegat
     
     var apps : [TheApp] = []
     var app_id = ""
-    var path : URL?
+    
     var file : String = ""
     var AF = ApiMagnament()
+    let FileC = FileController()
     @IBOutlet weak var TableApps: UITableView!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        file = setLocalDirectoryCSV()
+        file = FileC.setLocalDirectoryCSV()
         AF.postApp(file: file)
-       // print(file.count)
+//        print(file.count)
         //Data hardocded//
-        apps = dataHardcoded()
         
+        AF.getAllApps(completion: {
+            
+            result in
+            self.loadData(apps: result)
+            
+        })
+        print(apps.count)
         self.TableApps.dataSource = self
         self.TableApps.delegate = self
         initMenuButton()
@@ -66,16 +73,7 @@ class ViewController: UIViewController, CKCircleMenuDelegate, UITableViewDelegat
         }
     }
     
-    func dataHardcoded()-> [TheApp]{
-        var apps : [TheApp] = []
-        apps.append(TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app"))
-         apps.append(TheApp(name: "Pokemon Go", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "pokemongo"))
-         apps.append(TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app"))
-         apps.append(TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app"))
-         apps.append(TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app"))
-        return apps
-        
-    }
+    
     @IBAction func onClickMenu(_ sender: Any) {
         self.circleMenuView = CKCircleMenuView(atOrigin: tPoint, usingOptions: optionsMenu, withImageArray: self.menuButtonItems, andTitles: menuItemsLabel)
         self.view.addSubview(self.circleMenuView)
@@ -87,24 +85,13 @@ class ViewController: UIViewController, CKCircleMenuDelegate, UITableViewDelegat
         //Aqui va el proceso de dirigir al usuario a una pantalla especifica//
     }
     
-    func setLocalDirectoryCSV()->String{
-        let name = "usage.csv"
-        let folder = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        path = folder.first?.appendingPathComponent(name)
-        print(path!)
-        return loadDataFromFile()
+    
+     func loadData(apps: [TheApp]){
+        self.apps = apps
+        self.TableApps.reloadData()
     }
     
-    func loadDataFromFile()->String{
-        var file :String = ""
-        do {
-            file = try String(contentsOf: path!, encoding: .utf8)
-            //print("tamaño del fichero\(file.count)")
-        } catch {
-            print("Error al leer desde fichero")
-        }
-        return file
-    }
+    
     
     private func initMenuButton() {
         tPoint = CGPoint(x:MenuButton.frame.midX, y: MenuButton.frame.midY)
@@ -132,7 +119,12 @@ class ViewController: UIViewController, CKCircleMenuDelegate, UITableViewDelegat
         optionsMenu[CIRCLE_MENU_BUTTON_TITLE_VISIBLE] = true as AnyObject
         optionsMenu[CIRCLE_MENU_BUTTON_TITLE_FONT_SIZE] = 13.0 as AnyObject
     }
-
+//    override func viewWillAppear(_ animated: Bool) {
+//        self.TableApps.reloadData()
+//        super.viewWillAppear(false)
+//
+//
+//    }
     
 }
 

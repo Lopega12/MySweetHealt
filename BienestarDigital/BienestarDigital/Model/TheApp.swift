@@ -29,4 +29,5 @@ class TheApp : Codable{
 //        A medio implementar
         return daily;
     }
+    
 }
