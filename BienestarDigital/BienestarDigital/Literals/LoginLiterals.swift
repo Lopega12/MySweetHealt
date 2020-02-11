@@ -14,3 +14,10 @@ open class LoginLiterals{
     static var LabelUser = "Usuario"
     static var LabelPass = "Contraseña"
 }
+open class RegisterLiterals{
+    static var ButtonRegister = "Regístrate"
+    static var LabelName = "Nombre"
+    static var LabelPassword = "Constraseña"
+    static var LabelRetype = "Repite contraseña"
+    static var LabelEmail = "Email"
+}

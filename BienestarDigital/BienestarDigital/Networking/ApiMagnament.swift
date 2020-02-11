@@ -25,15 +25,15 @@ class ApiMagnament{
             
         }
     }
-    func getAppDetail(app: Int, completion: @escaping (TheApp?)-> Void) {
-        var app = TheApp(name: "", latitude: 0.0, longitude: 0.0, time: "nill", imageURL: "")
+    func getAppDetail(app: String, completion: @escaping (TheApp?)-> Void) {
+        var app = TheApp(name: "", latitude: 0.0, longitude: 0.0, time: "nil", imageURL: "")
         Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/public/api", method: .get, parameters: ["app": app]).responseJSON{
             response in switch(response.result){
             case .success:
                print("patata")
                
             case .failure(let error):
-                let app =  TheApp(name: "Clash Royale", latitude: 1.0, longitude: 10.1, time: "22:45", imageURL: "")
+                let app =  TheApp(name: "Clash Royale", latitude: 1.0, longitude: 10.1, time: "22:45", imageURL: "clash_royale_app")
                 completion(app)
             }
         }
