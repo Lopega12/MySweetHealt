@@ -7,10 +7,11 @@
 //
 
 import Foundation
-class TheApp{
+class TheApp : Codable{
     var name: String!,image: String?
     var time: String!
     var latitude: Double!,lonigutde:Double!
+    var dailyTime : Double?
     
     init(name: String,latitude:Double,longitude:Double, time: String,imageURL: String?) {
             self.name = name
@@ -22,4 +23,11 @@ class TheApp{
         self.time = time
         
     }
+
+//Calculo del tiempo con respecto a la hora actual,
+    public func calcDaily(daily:Double)->Double{
+//        A medio implementar
+        return daily;
+    }
+    
 }
