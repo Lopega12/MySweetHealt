@@ -1,16 +1,14 @@
 //
-//  ProfileController.swift
+//  StatsViewController.swift
 //  BienestarDigital
 //
-//  Created by Loren on 18/01/2020.
+//  Created by Loren on 17/02/2020.
 //  Copyright © 2020 Loren. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import CKCircleMenuView
-
-class ProfileController : UIViewController,CKCircleMenuDelegate{
+class StatsViewController : UIViewController,CKCircleMenuDelegate{
     var menuButtonItems = Array<UIImage>()
     var optionsMenu = Dictionary<String,AnyObject>();
     var tPoint = CGPoint();
@@ -19,9 +17,11 @@ class ProfileController : UIViewController,CKCircleMenuDelegate{
     
     @IBOutlet weak var menuButton: UIButton!
     
+    @IBOutlet weak var statsTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-         initMenuButton()
+        initMenuButton()
     }
     
     @IBAction func openMenu(_ sender: Any) {
@@ -29,30 +29,6 @@ class ProfileController : UIViewController,CKCircleMenuDelegate{
         self.view.addSubview(self.circleMenuView)
         self.circleMenuView.delegate = self
         self.circleMenuView.openMenu()
-    }
-    
-       func circleMenuActivatedButton(with anIndex: Int32) {
-        //Aqui va el proceso de dirigir al usuario a una pantalla especifica//
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        switch anIndex {
-        case 0:
-            let controller = storyboard.instantiateViewController(withIdentifier: "ViewController")
-            self.present(controller, animated: true, completion: nil)
-        case 1:
-            let controller = storyboard.instantiateViewController(withIdentifier: "ReglasController")
-            self.present(controller, animated: true, completion: nil)
-        case 2:
-            let controller = storyboard.instantiateViewController(identifier: "StatsController")
-            self.present(controller, animated: true, completion: nil)
-        case 3:
-            let controller = storyboard.instantiateViewController(withIdentifier: "ProfileController")
-            self.present(controller, animated: true, completion: nil)
-        
-            
-        default:
-            print("Button Invalid")
-            break;
-        }
     }
     
     private func initMenuButton() {
@@ -82,5 +58,27 @@ class ProfileController : UIViewController,CKCircleMenuDelegate{
         optionsMenu[CIRCLE_MENU_BUTTON_TITLE_FONT_SIZE] = 13.0 as AnyObject
     }
     
-    
+        func circleMenuActivatedButton(with anIndex: Int32) {
+        //Aqui va el proceso de dirigir al usuario a una pantalla especifica//
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        switch anIndex {
+        case 0:
+            let controller = storyboard.instantiateViewController(withIdentifier: "ViewController")
+            self.present(controller, animated: true, completion: nil)
+        case 1:
+            let controller = storyboard.instantiateViewController(withIdentifier: "ReglasController")
+            self.present(controller, animated: true, completion: nil)
+        case 2:
+            let controller = storyboard.instantiateViewController(identifier: "StatsController")
+            self.present(controller, animated: true, completion: nil)
+        case 3:
+            let controller = storyboard.instantiateViewController(withIdentifier: "ProfileController")
+            self.present(controller, animated: true, completion: nil)
+        
+            
+        default:
+            print("Button Invalid")
+            break;
+        }
+    }
 }

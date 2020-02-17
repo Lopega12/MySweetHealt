@@ -91,6 +91,9 @@ class ViewController: UIViewController, CKCircleMenuDelegate, UITableViewDelegat
         case 1:
             let controller = storyboard.instantiateViewController(withIdentifier: "ReglasController")
             self.present(controller, animated: true, completion: nil)
+        case 2:
+            let controller = storyboard.instantiateViewController(identifier: "StatsController")
+            self.present(controller, animated: true, completion: nil)
         case 3:
             let controller = storyboard.instantiateViewController(withIdentifier: "ProfileController")
             self.present(controller, animated: true, completion: nil)
