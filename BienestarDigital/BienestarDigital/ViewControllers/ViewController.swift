@@ -83,6 +83,23 @@ class ViewController: UIViewController, CKCircleMenuDelegate, UITableViewDelegat
     
     func circleMenuActivatedButton(with anIndex: Int32) {
         //Aqui va el proceso de dirigir al usuario a una pantalla especifica//
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        switch anIndex {
+        case 0:
+            let controller = storyboard.instantiateViewController(withIdentifier: "ViewController")
+            self.present(controller, animated: true, completion: nil)
+        case 1:
+            let controller = storyboard.instantiateViewController(withIdentifier: "ReglasController")
+            self.present(controller, animated: true, completion: nil)
+        case 3:
+            let controller = storyboard.instantiateViewController(withIdentifier: "ProfileController")
+            self.present(controller, animated: true, completion: nil)
+        
+            
+        default:
+            print("Button Invalid")
+            break;
+        }
     }
     
     
@@ -119,12 +136,6 @@ class ViewController: UIViewController, CKCircleMenuDelegate, UITableViewDelegat
         optionsMenu[CIRCLE_MENU_BUTTON_TITLE_VISIBLE] = true as AnyObject
         optionsMenu[CIRCLE_MENU_BUTTON_TITLE_FONT_SIZE] = 13.0 as AnyObject
     }
-//    override func viewWillAppear(_ animated: Bool) {
-//        self.TableApps.reloadData()
-//        super.viewWillAppear(false)
-//
-//
-//    }
     
 }
 
