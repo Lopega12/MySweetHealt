@@ -54,6 +54,19 @@ Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/
             }
         }
     }
+    func getBeforeDates(from: String, completion: @escaping ([Stat])-> Void){
+        Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/public/api/getDates",
+                          method: .get, parameters: ["idApp": from]).responseJSON{
+                            response in switch(response.result){
+                            case .success:
+                                print(response)
+                            case .failure(let error):
+                                let stats = self.statsHardcoded()
+                                completion(stats)
+                            }
+                            
+        }
+    }
     
     func dataHardcoded()-> [TheApp]{
         var apps : [TheApp] = []
@@ -63,6 +76,27 @@ Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/
          apps.append(TheApp(name: "Instagram", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "Instagram_icon"))
          apps.append(TheApp(name: "Reloj", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "https://enteratec.com/wp-content/uploads/2016/08/imagen-00-destacada.png"))
         return apps
+        
+    }
+    func statsHardcoded()->[Stat]{
+        var stats : [Stat] = []
+        stats.append(Stat(fecha: "29-01-2019", time: "5h"))
+        stats.append(Stat(fecha: "23-01-2019", time: "10 min"))
+        stats.append(Stat(fecha: "12-01-2019", time: "23 min"))
+        stats.append(Stat(fecha: "10-01-2019", time: "45 min"))
+        stats.append(Stat(fecha: "9-01-2019", time: "50 min"))
+        stats.append(Stat(fecha: "16-01-2019", time: "34 min"))
+        stats.append(Stat(fecha: "10-01-2019", time: "34 min"))
+        stats.append(Stat(fecha: "9-01-2019", time: "34 min"))
+        stats.append(Stat(fecha: "8-01-2019", time: "34 min"))
+        stats.append(Stat(fecha: "7-01-2019", time: "34 min"))
+        stats.append(Stat(fecha: "6-01-2019", time: "34 min"))
+        stats.append(Stat(fecha: "5-01-2019", time: "34 min"))
+        stats.append(Stat(fecha: "4-01-2019", time: "34 min"))
+        stats.append(Stat(fecha: "3-01-2019", time: "34 min"))
+        stats.append(Stat(fecha: "2-01-2019", time: "34 min"))
+        stats.append(Stat(fecha: "1-01-2019", time: "34 min"))
+        return stats
         
     }
     
