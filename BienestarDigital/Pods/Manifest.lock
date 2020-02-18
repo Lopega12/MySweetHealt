@@ -1,3 +1,20 @@
-PODFILE CHECKSUM: 06160ba715c2901c7844621c78b2aebc4ef77fa7
+PODS:
+  - Alamofire (4.9.1)
+  - CKCircleMenuView (0.4.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - CKCircleMenuView
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CKCircleMenuView
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  CKCircleMenuView: 581c3e55ba554b62abb3f1ffd6e7d116b96759d3
+
+PODFILE CHECKSUM: a909c3a7eda69770240adefff1e0a114ba777693
 
 COCOAPODS: 1.8.4
