@@ -8,14 +8,26 @@
 
 import UIKit
 import CKCircleMenuView
-class RuleViewController : UIViewController,CKCircleMenuDelegate{
+class RuleViewController : UIViewController,CKCircleMenuDelegate,UICollectionViewDataSource,UICollectionViewDelegate{
+        
+    /**
+     Vars of pod menu
+     */
     @IBOutlet weak var menuButton: UIButton!
     var menuButtonItems = Array<UIImage>()
     var optionsMenu = Dictionary<String,AnyObject>();
     var tPoint = CGPoint();
     var menuItemsLabel : [ String] = ["Home","Control","Stats","Perfil"]
     var circleMenuView = CKCircleMenuView()
-    
+    /**
+                Vars from this view
+     */
+    @IBOutlet weak var rulesCollection: UICollectionView!
+    var listRules : [TheApp] = [];
+    var AF = ApiMagnament()
+    /**
+     Actions and functions for pod menu funcionality
+     */
     @IBAction func openMenu(_ sender: Any) {
         self.circleMenuView = CKCircleMenuView(atOrigin: tPoint, usingOptions: optionsMenu, withImageArray: self.menuButtonItems, andTitles: menuItemsLabel)
         self.view.addSubview(self.circleMenuView)
@@ -23,10 +35,23 @@ class RuleViewController : UIViewController,CKCircleMenuDelegate{
         self.circleMenuView.openMenu()
     }
     
+    func loadData(list: [TheApp]){
+        self.listRules = list
+        self.rulesCollection.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initMenuButton()
+        AF.getRulesData(user: "1", completion: {
+            result in
+            self.loadData(list: result)
+        })
+        print(listRules.count)
+        self.rulesCollection.dataSource = self
+        self.rulesCollection.delegate = self
     }
+    
     private func initMenuButton() {
            tPoint = CGPoint(x:menuButton.frame.midX, y: menuButton.frame.midY)
            self.menuButtonItems.append(UIImage(named: "mobile-app")!)
@@ -76,4 +101,19 @@ class RuleViewController : UIViewController,CKCircleMenuDelegate{
             break;
         }
     }
+    /**
+     Functions of collection view rules
+     */
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return listRules.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let identifier = "rule"
+        let cell = rulesCollection.dequeueReusableCell(withReuseIdentifier: identifier , for: indexPath) as! RuleCollectionViewCell
+        cell.imageApp.image = UIImage(named: listRules[indexPath.row].image!)
+        cell.nameApp.text = listRules[indexPath.row].name
+        return cell
+    }
+    
 }

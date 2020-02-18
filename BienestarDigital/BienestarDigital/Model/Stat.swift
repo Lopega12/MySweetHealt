@@ -8,12 +8,14 @@
 
 import Foundation
 class Stat : Codable{
-    var fecha : String?
-    var time : String?
+    var fecha : String!
+    var time : String!
+    var nameApp: String!
     
-    init(fecha: String,time: String){
+    init(fecha: String,time: String,nameApp: String){
         self.fecha = fecha
         self.time = time
+        self.nameApp = nameApp
     }
     
 }

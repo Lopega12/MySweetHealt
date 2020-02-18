@@ -62,4 +62,5 @@ class StatAppViewController : UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    
 }

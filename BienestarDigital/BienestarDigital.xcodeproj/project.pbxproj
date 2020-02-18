@@ -28,6 +28,9 @@
 		5CB584E523D0E581008FA9A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB584E323D0E581008FA9A6 /* Main.storyboard */; };
 		5CB584E723D0E582008FA9A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CB584E623D0E582008FA9A6 /* Assets.xcassets */; };
 		5CB584EA23D0E582008FA9A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB584E823D0E582008FA9A6 /* LaunchScreen.storyboard */; };
+		5CBA51FC23FC0F91002E7A5D /* RuleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA51FB23FC0F91002E7A5D /* RuleCollectionViewCell.swift */; };
+		5CBA51FE23FC5649002E7A5D /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA51FD23FC5649002E7A5D /* Rule.swift */; };
+		5CBA522023FC9851002E7A5D /* StatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA521F23FC9851002E7A5D /* StatTableViewCell.swift */; };
 		5CCA51C323F5A360004EA57D /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA51C223F5A360004EA57D /* Stat.swift */; };
 		5CCA51C523F5B10D004EA57D /* TableViewStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA51C423F5B10D004EA57D /* TableViewStatsCell.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +59,9 @@
 		5CB584E623D0E582008FA9A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CB584E923D0E582008FA9A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CB584EB23D0E582008FA9A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CBA51FB23FC0F91002E7A5D /* RuleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleCollectionViewCell.swift; sourceTree = "<group>"; };
+		5CBA51FD23FC5649002E7A5D /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		5CBA521F23FC9851002E7A5D /* StatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatTableViewCell.swift; sourceTree = "<group>"; };
 		5CCA51C223F5A360004EA57D /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		5CCA51C423F5B10D004EA57D /* TableViewStatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewStatsCell.swift; sourceTree = "<group>"; };
 		75BE03E4AEEE5EC986FB6595 /* Pods-BienestarDigital.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BienestarDigital.debug.xcconfig"; path = "Target Support Files/Pods-BienestarDigital/Pods-BienestarDigital.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +109,7 @@
 			children = (
 				5C37C91A23DC6CE100A4CF66 /* TheApp.swift */,
 				5CCA51C223F5A360004EA57D /* Stat.swift */,
+				5CBA51FD23FC5649002E7A5D /* Rule.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +170,8 @@
 				5CB584DF23D0E581008FA9A6 /* SceneDelegate.swift */,
 				5CB584E323D0E581008FA9A6 /* Main.storyboard */,
 				5C37C91723DC6C2700A4CF66 /* AppsTableViewTableViewCell.swift */,
+				5CBA51FB23FC0F91002E7A5D /* RuleCollectionViewCell.swift */,
+				5CBA521F23FC9851002E7A5D /* StatTableViewCell.swift */,
 				5CCA51C423F5B10D004EA57D /* TableViewStatsCell.swift */,
 				5CB584E623D0E582008FA9A6 /* Assets.xcassets */,
 				5CB584E823D0E582008FA9A6 /* LaunchScreen.storyboard */,
@@ -300,10 +309,13 @@
 				5C9A1E5323F1DBAC0054559A /* LoginViewController.swift in Sources */,
 				5C9A1E5523F1DBBC0054559A /* RegisterViewController.swift in Sources */,
 				5CB584E223D0E581008FA9A6 /* ViewController.swift in Sources */,
+				5CBA51FE23FC5649002E7A5D /* Rule.swift in Sources */,
 				5CB2F8E123F3300800105D24 /* FileController.swift in Sources */,
 				5CAE8C2C23FB403E00E0A55A /* StatsViewController.swift in Sources */,
 				5CCA51C523F5B10D004EA57D /* TableViewStatsCell.swift in Sources */,
 				5CB584DE23D0E581008FA9A6 /* AppDelegate.swift in Sources */,
+				5CBA522023FC9851002E7A5D /* StatTableViewCell.swift in Sources */,
+				5CBA51FC23FC0F91002E7A5D /* RuleCollectionViewCell.swift in Sources */,
 				5C15249623F0A6250087300D /* StatAppViewController.swift in Sources */,
 				5C9E3B4B23E6D40D0012B9F4 /* ApiMagnament.swift in Sources */,
 				5C37C91823DC6C2700A4CF66 /* AppsTableViewTableViewCell.swift in Sources */,

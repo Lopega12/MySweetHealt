@@ -9,6 +9,9 @@
 import UIKit
 import CKCircleMenuView
 class NewRuleViewController: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate,CKCircleMenuDelegate{
+    /**
+     vars for menu buton pod
+     */
     var menuButtonItems = Array<UIImage>()
     var optionsMenu = Dictionary<String,AnyObject>();
     var tPoint = CGPoint();
@@ -24,8 +27,23 @@ class NewRuleViewController: UIViewController, UICollectionViewDataSource,UIColl
         self.circleMenuView.delegate = self
         self.circleMenuView.openMenu()
     }
-    
+    /**
+    general vars of the view
+    */
     public var applist:[TheApp] = [];
+    var AF = ApiMagnament()
+    
+    @IBOutlet weak var maxTime: UITextField!
+    
+    @IBOutlet weak var timeInit: UITextField!
+    
+    @IBOutlet weak var timeFin: UITextField!
+    
+    @IBAction func saveChanges(_ sender: Any) {
+        var timeMax = Int(maxTime.text!)
+        AF.postRule(rule: Rule(maxAllow: timeMax!, hInit: timeInit.text!, hFinish: timeFin.text!), App: TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app", rules: Rule(maxAllow: 4, hInit: "15:00", hFinish: "19:00")))
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return applist.count
     }
@@ -42,7 +60,10 @@ class NewRuleViewController: UIViewController, UICollectionViewDataSource,UIColl
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1;
     }
-    
+    func loadData(apps: [TheApp]){
+        self.applist = apps
+        self.appSelector.reloadData()
+    }
     
     
     @IBOutlet weak var appSelector: UICollectionView!
@@ -50,6 +71,9 @@ class NewRuleViewController: UIViewController, UICollectionViewDataSource,UIColl
     override func viewDidLoad() {
         initSelectedApps()
         initMenuButton()
+        AF.getAllApps(completion: {
+            result in self.loadData(apps: result)
+        })
         super.viewDidLoad()
     }
     override func viewWillAppear(_ animated: Bool) {
