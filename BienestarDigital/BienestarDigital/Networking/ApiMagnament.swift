@@ -78,8 +78,16 @@ Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/
             }
         }
     }
-    func getStats(orderBy: Int){
-        
+    func getStats(orderBy: Int, completion: @escaping ([Stat])->Void){
+        Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/public/api/getStat",method: .get, parameters: ["order": orderBy]).responseJSON{
+            response in switch(response.result){
+            case .success:
+                print(response)
+            case .failure(let error):
+                let stats = self.statsHardcoded()
+                completion(stats)
+            }
+        }
     }
     func postRule(rule: Rule,App: TheApp){
         Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/public/api/getRules",method: .post, parameters: ["maxAllow":rule.maxAllow,"hInit":rule.hInit,"hFinish":rule.hFinish,"app_id":App.name]).responseJSON{
@@ -120,6 +128,7 @@ Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/
         return stats
         
     }
+    
     func rulesHard()->[TheApp]{
         var rules : [TheApp] = []
         rules.append(TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app", rules: Rule(maxAllow: 4, hInit: "15:00", hFinish: "19:00")))

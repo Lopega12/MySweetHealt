@@ -18,7 +18,6 @@
 		5C9E3B4B23E6D40D0012B9F4 /* ApiMagnament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9E3B4A23E6D40D0012B9F4 /* ApiMagnament.swift */; };
 		5CAE8C2223FADE5A00E0A55A /* NewRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE8C2123FADE5A00E0A55A /* NewRuleViewController.swift */; };
 		5CAE8C2423FAE61900E0A55A /* CollectionCellViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE8C2323FAE61900E0A55A /* CollectionCellViewApp.swift */; };
-		5CAE8C2623FB057500E0A55A /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE8C2523FB057500E0A55A /* MenuController.swift */; };
 		5CAE8C2A23FB3B6B00E0A55A /* RuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE8C2923FB3B6B00E0A55A /* RuleViewController.swift */; };
 		5CAE8C2C23FB403E00E0A55A /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE8C2B23FB403E00E0A55A /* StatsViewController.swift */; };
 		5CB2F8E123F3300800105D24 /* FileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2F8E023F3300800105D24 /* FileController.swift */; };
@@ -47,7 +46,6 @@
 		5C9E3B4A23E6D40D0012B9F4 /* ApiMagnament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMagnament.swift; sourceTree = "<group>"; };
 		5CAE8C2123FADE5A00E0A55A /* NewRuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRuleViewController.swift; sourceTree = "<group>"; };
 		5CAE8C2323FAE61900E0A55A /* CollectionCellViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellViewApp.swift; sourceTree = "<group>"; };
-		5CAE8C2523FB057500E0A55A /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		5CAE8C2923FB3B6B00E0A55A /* RuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleViewController.swift; sourceTree = "<group>"; };
 		5CAE8C2B23FB403E00E0A55A /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		5CB2F8E023F3300800105D24 /* FileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileController.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				5CB2F8E023F3300800105D24 /* FileController.swift */,
-				5CAE8C2523FB057500E0A55A /* MenuController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -304,7 +301,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CCA51C323F5A360004EA57D /* Stat.swift in Sources */,
-				5CAE8C2623FB057500E0A55A /* MenuController.swift in Sources */,
 				5CAE8C2A23FB3B6B00E0A55A /* RuleViewController.swift in Sources */,
 				5C9A1E5323F1DBAC0054559A /* LoginViewController.swift in Sources */,
 				5C9A1E5523F1DBBC0054559A /* RegisterViewController.swift in Sources */,

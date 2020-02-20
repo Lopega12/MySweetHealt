@@ -10,6 +10,9 @@ import UIKit
 class StatTableViewCell : UITableViewCell{
     //errores a la hora de poner outlets, ni idea de por que,
     //incluso he realizado un clean y reiniciado varias veces xcode.
+    @IBOutlet weak var appName: UILabel!
+    
+    @IBOutlet weak var appTime: UILabel!
     
     override func awakeFromNib() {
            super.awakeFromNib()
