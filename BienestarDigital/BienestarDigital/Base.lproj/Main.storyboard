@@ -122,7 +122,7 @@
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="FhC-FF-JEx">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="222.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9ME-py-jeq">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9ME-py-jeq">
                                                 <rect key="frame" x="0.0" y="2" width="375" height="220.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="szn-AL-qqQ">
@@ -139,14 +139,15 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="jP0-uH-oRI" firstAttribute="top" secondItem="szn-AL-qqQ" secondAttribute="bottom" constant="50" id="a0S-Xq-vfs"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="9ME-py-jeq" secondAttribute="bottom" id="84l-O2-0EF"/>
+                                            <constraint firstAttribute="trailing" secondItem="9ME-py-jeq" secondAttribute="trailing" id="8N0-jV-bYD"/>
                                             <constraint firstAttribute="trailing" secondItem="9ME-py-jeq" secondAttribute="trailing" id="WSL-4H-2oh"/>
+                                            <constraint firstItem="9ME-py-jeq" firstAttribute="top" secondItem="FhC-FF-JEx" secondAttribute="top" constant="2" id="dBq-ZU-gFh"/>
+                                            <constraint firstItem="9ME-py-jeq" firstAttribute="leading" secondItem="FhC-FF-JEx" secondAttribute="leading" id="fyB-xD-F8V"/>
                                             <constraint firstItem="9ME-py-jeq" firstAttribute="leading" secondItem="FhC-FF-JEx" secondAttribute="leading" id="vKh-5U-rFX"/>
                                         </constraints>
                                     </view>
@@ -218,15 +219,14 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="222.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqb-8R-L2L">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="74.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="111.5"/>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="saveChangesAction:" destination="4My-vR-rxp" eventType="touchUpInside" id="qGV-CA-pDb"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dR-Ns-hiV">
-                                                        <rect key="frame" x="0.0" y="74.5" width="320" height="74"/>
-                                                        <state key="normal" title="Button"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUE-t9-SX8">
-                                                        <rect key="frame" x="0.0" y="148.5" width="320" height="74"/>
+                                                        <rect key="frame" x="0.0" y="111.5" width="320" height="111"/>
                                                         <state key="normal" title="Button"/>
                                                     </button>
                                                 </subviews>
@@ -247,7 +247,6 @@
                                     <constraint firstAttribute="trailing" secondItem="FhC-FF-JEx" secondAttribute="trailing" id="VdS-PH-7zg"/>
                                     <constraint firstItem="LnB-G0-rQV" firstAttribute="leading" secondItem="bbN-rf-iHH" secondAttribute="leading" id="WGh-DF-NIc"/>
                                     <constraint firstItem="FhC-FF-JEx" firstAttribute="leading" secondItem="bbN-rf-iHH" secondAttribute="leadingMargin" id="dNd-Wk-NXP"/>
-                                    <constraint firstItem="LnB-G0-rQV" firstAttribute="top" secondItem="FhC-FF-JEx" secondAttribute="bottom" constant="20" id="jZo-08-d8A"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rA5-WY-4WO">
@@ -280,7 +279,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="Vkh-eX-tio"/>
                     <connections>
+                        <outlet property="closeSesion" destination="5dR-Ns-hiV" id="olV-lQ-xDv"/>
+                        <outlet property="emailEnable" destination="XDY-3Y-czX" id="U7d-9w-CwO"/>
                         <outlet property="menuButton" destination="rA5-WY-4WO" id="V0G-Ti-VgT"/>
+                        <outlet property="notificationEnable" destination="Jug-Vl-y2U" id="enY-a0-nhR"/>
+                        <outlet property="saveChanges" destination="Bqb-8R-L2L" id="j7A-sb-MB3"/>
+                        <outlet property="textName" destination="FT4-l7-Z4d" id="JTa-la-aKs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuw-Wz-zHh" sceneMemberID="firstResponder"/>
@@ -985,20 +989,20 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="state" id="Aqa-L8-0fr" customClass="TableViewStatsCell" customModule="BienestarDigital" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="339" width="365" height="241.5"/>
+                                        <rect key="frame" x="0.0" y="339" width="365" height="242.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Aqa-L8-0fr" id="Swb-Wc-3Eo">
-                                            <rect key="frame" x="0.0" y="0.0" width="365" height="241.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="365" height="242.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUs-Go-8Lb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="365" height="241.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="365" height="242.5"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKl-f6-YyR" userLabel="DateView">
-                                                            <rect key="frame" x="0.0" y="0.0" width="146" height="241.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="146" height="242.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1V-FP-fyB" userLabel="DateLabel">
-                                                                    <rect key="frame" x="52" y="110.5" width="42" height="20.5"/>
+                                                                    <rect key="frame" x="52" y="111" width="42" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -1011,10 +1015,10 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rN6-pp-EPQ" userLabel="TimeView">
-                                                            <rect key="frame" x="146" y="0.0" width="219" height="241.5"/>
+                                                            <rect key="frame" x="146" y="0.0" width="219" height="242.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pa-gu-Uoq" userLabel="TimeLabel">
-                                                                    <rect key="frame" x="88.5" y="110.5" width="42" height="20.5"/>
+                                                                    <rect key="frame" x="88.5" y="111" width="42" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -1211,7 +1215,6 @@
                                                                         </constraints>
                                                                     </stackView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="quaternarySystemFillColor" red="0.4549019608" green="0.4549019608" blue="0.50196078430000002" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="trailing" secondItem="Vkx-EG-2PS" secondAttribute="trailing" id="Bjb-Xc-goG"/>
                                                                     <constraint firstItem="Vkx-EG-2PS" firstAttribute="top" secondItem="AhL-sZ-jhE" secondAttribute="top" id="Bsi-6E-auD"/>
@@ -1725,6 +1728,6 @@
         <image name="logo" width="250" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zlG-Sk-zqo"/>
+        <segue reference="NXy-sO-Ofh"/>
     </inferredMetricsTieBreakers>
 </document>

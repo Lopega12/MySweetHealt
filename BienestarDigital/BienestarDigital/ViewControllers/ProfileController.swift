@@ -18,10 +18,22 @@ class ProfileController : UIViewController,CKCircleMenuDelegate{
     var circleMenuView = CKCircleMenuView()
     
     @IBOutlet weak var menuButton: UIButton!
+     /**
+     variables de la vista en general
+     */
+    let AF = ApiMagnament();
+    public var idUser = 1;
+    @IBOutlet weak var saveChanges: UIButton!
+    @IBOutlet weak var closeSesion: UIButton!
+    @IBOutlet weak var textName: UITextField!
+    @IBOutlet weak var notificationEnable: UISwitch!
+    @IBOutlet weak var emailEnable: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
          initMenuButton()
+        saveChanges.setTitle(PerfilLiterals.ButtonSave, for: .normal)
+        closeSesion.setTitle(PerfilLiterals.ButtonClose, for: .normal)
     }
     
     @IBAction func openMenu(_ sender: Any) {
@@ -31,7 +43,20 @@ class ProfileController : UIViewController,CKCircleMenuDelegate{
         self.circleMenuView.openMenu()
     }
     
-       func circleMenuActivatedButton(with anIndex: Int32) {
+    @IBAction func saveChangesAction(_ sender: Any) {
+        if(textName.text!.isEmpty){
+            let alert = UIAlertController(title: "Atención", message: "El campo nombre no puede quedarse en blanco", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }else{
+            AF.postChangeUser(User: ["Name":textName.text!,"id": "\(idUser)"])
+            let alert = UIAlertController(title: "Ok", message: "Guardado Correcto", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func circleMenuActivatedButton(with anIndex: Int32) {
         //Aqui va el proceso de dirigir al usuario a una pantalla especifica//
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         switch anIndex {

@@ -99,7 +99,7 @@ Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/
             }
         }
     }
-    func postChangeUser(User : [String]){
+    func postChangeUser(User : [String:String]){
         Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/public/api/updateUser",method: .post, parameters: nil).responseJSON{
             response in switch(response.result){
             case .success:
