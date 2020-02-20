@@ -10,6 +10,7 @@ import UIKit
 import CKCircleMenuView
 class StatsViewController : UIViewController,CKCircleMenuDelegate, UITableViewDataSource,UITableViewDelegate{
     
+    @IBOutlet weak var timeInterval: UISegmentedControl!
     
     /**
      Vars for pod menu
@@ -21,6 +22,7 @@ class StatsViewController : UIViewController,CKCircleMenuDelegate, UITableViewDa
     var circleMenuView = CKCircleMenuView()
      
     var stats : [Stat] = []
+    var AF = ApiMagnament()
     
     @IBOutlet weak var menuButton: UIButton!
     /**
@@ -32,6 +34,9 @@ class StatsViewController : UIViewController,CKCircleMenuDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         initMenuButton()
+        changeOrder(order: 0)
+        self.statsTable.dataSource = self
+        self.statsTable.delegate = self
     }
     /**
      for pod menu
@@ -101,10 +106,13 @@ class StatsViewController : UIViewController,CKCircleMenuDelegate, UITableViewDa
     @IBAction func selecTime(_ sender: Any) {
         switch selectTime.selectedSegmentIndex{
         case 0:
+            changeOrder(order: 0)
             break;
         case 1:
+            changeOrder(order: 1)
             break;
         case 2:
+            changeOrder(order: 2)
             break;
         default:
             print ("Option of default")
@@ -117,7 +125,17 @@ class StatsViewController : UIViewController,CKCircleMenuDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = "stat"
         let cell = statsTable.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! StatTableViewCell
-        //No puedo seguir por aqui asigando por que no puedo asginar outlets en el controlador de la celda.
+        cell.appName.text = stats[indexPath.row].nameApp
+        cell.appTime.text = stats[indexPath.row].time
         return cell
+    }
+    func loadData(statList : [Stat]){
+        self.stats = statList;
+        self.statsTable.reloadData()
+    }
+    func changeOrder(order: Int){
+        AF.getStats(orderBy: order, completion: {
+            result in self.loadData(statList: result)
+        })
     }
 }

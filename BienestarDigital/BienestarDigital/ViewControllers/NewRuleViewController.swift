@@ -40,6 +40,7 @@ class NewRuleViewController: UIViewController, UICollectionViewDataSource,UIColl
     @IBOutlet weak var timeFin: UITextField!
     
     @IBAction func saveChanges(_ sender: Any) {
+    
         var timeMax = Int(maxTime.text!)
         AF.postRule(rule: Rule(maxAllow: timeMax!, hInit: timeInit.text!, hFinish: timeFin.text!), App: TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app", rules: Rule(maxAllow: 4, hInit: "15:00", hFinish: "19:00")))
     }
