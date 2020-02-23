@@ -10,6 +10,9 @@ import UIKit
 import CKCircleMenuView
 
 class ViewController: UIViewController, CKCircleMenuDelegate, UITableViewDelegate, UITableViewDataSource{
+    /**
+     Funciones de la tabla
+     */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return apps.count
     }
@@ -29,7 +32,9 @@ class ViewController: UIViewController, CKCircleMenuDelegate, UITableViewDelegat
         self.performSegue(withIdentifier: "details", sender: self)
     
     }
-
+/**
+     Varaibles generales de la vista
+     */
     @IBOutlet weak var MenuButton: UIButton!
     var menuButtonItems = Array<UIImage>()
     var optionsMenu = Dictionary<String,AnyObject>();
@@ -60,7 +65,7 @@ class ViewController: UIViewController, CKCircleMenuDelegate, UITableViewDelegat
             self.loadData(apps: result)
             
         })
-        print(apps.count)
+       // print(apps.count)
         self.TableApps.dataSource = self
         self.TableApps.delegate = self
         initMenuButton()
@@ -105,7 +110,9 @@ class ViewController: UIViewController, CKCircleMenuDelegate, UITableViewDelegat
         }
     }
     
-    
+    /**
+     Sacar las apps a variable global(Solo para hardcoded)
+     */
      func loadData(apps: [TheApp]){
         self.apps = apps
         self.TableApps.reloadData()

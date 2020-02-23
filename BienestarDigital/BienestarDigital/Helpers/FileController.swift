@@ -7,6 +7,9 @@
 //
 
 import Foundation
+/**
+ Helper para lectura y tratamiento del fichero
+ */
 class FileController{
     var path : URL?
     public func loadDataFromFile()->String{

@@ -18,6 +18,7 @@ class LoginViewController: UIViewController{
     @IBOutlet weak var buttonRecover: UIButton!
     @IBOutlet weak var buttonRegister: UIButton!
     
+    let AF = ApiMagnament();
     override func viewDidLoad() {
         setupView()
         super.viewDidLoad()
@@ -34,6 +35,14 @@ class LoginViewController: UIViewController{
     
     @IBAction func LoginAction(_ sender: UIButton) {
         if(!inputEmail.text!.isEmpty && !(inputPassword.text!.isEmpty)){
+            AF.postLogin(User: ["user": inputEmail.text!, "pass": inputPassword.text!], completion: {
+                result in switch(result){
+                case true:
+                    self.performSegue(withIdentifier: "Home" ,sender: self)
+                case false:
+                    break;
+                }
+            })
          self.performSegue(withIdentifier: "Home", sender: self)
         }
         

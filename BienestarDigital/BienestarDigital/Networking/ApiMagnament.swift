@@ -27,6 +27,9 @@ class ApiMagnament{
             
         }
     }
+    /**
+     Obtener detalles de la app desde servidor dado una id de app
+     */
     func getAppDetail(app: String, completion: @escaping (TheApp?)-> Void) {
         var app = TheApp(name: "", latitude: 0.0, longitude: 0.0, time: "nil", imageURL: "")
         Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/public/api", method: .get, parameters: ["app": app]).responseJSON{
@@ -41,7 +44,9 @@ class ApiMagnament{
         }
         
     }
-    
+    /**
+     Obtener todas las apps (Para la vista Home)
+     */
     func getAllApps(completion: @escaping ([TheApp])-> Void){
 Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/public/api/allApps",
         method: .get, parameters: nil ).responseJSON{
@@ -54,6 +59,9 @@ Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/
             }
         }
     }
+    /**
+     Obtener estadisticas de dias anterios(Vista detalles de la aplicacion)
+     */
     func getBeforeDates(from: String, completion: @escaping ([Stat])-> Void){
         Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/public/api/getDates",
                           method: .get, parameters: ["idApp": from]).responseJSON{
@@ -67,6 +75,9 @@ Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/
                             
         }
     }
+/**
+     Obtener todas las reglas definidas por el usuario
+     */
     func getRulesData(user: String, completion: @escaping ([TheApp])->Void){
     Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/public/api/getRules",method: .get, parameters: ["id_user":user]).responseJSON{
             response in switch(response.result){
@@ -78,6 +89,9 @@ Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/
             }
         }
     }
+    /**
+     Obtener las estadisitas de uso de apps por mes,dias, semanas
+     */
     func getStats(orderBy: Int, completion: @escaping ([Stat])->Void){
         Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/public/api/getStat",method: .get, parameters: ["order": orderBy]).responseJSON{
             response in switch(response.result){
@@ -89,6 +103,9 @@ Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/
             }
         }
     }
+    /**
+     Guardar una nueva regla
+     */
     func postRule(rule: Rule,App: TheApp){
         Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/public/api/getRules",method: .post, parameters: ["maxAllow":rule.maxAllow,"hInit":rule.hInit,"hFinish":rule.hFinish,"app_id":App.name]).responseJSON{
             response in switch(response.result){
@@ -99,7 +116,10 @@ Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/
             }
         }
     }
-    func postChangeUser(User : [String]){
+    /**
+     Guardar cambios en la vista perfil(De momento solo el nombre)
+     */
+    func postChangeUser(User : [String:String]){
         Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/public/api/updateUser",method: .post, parameters: nil).responseJSON{
             response in switch(response.result){
             case .success:
@@ -110,6 +130,37 @@ Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/
         }
     }
     
+    
+    func postRegisterUser(User : [String:String], completion: @escaping (Bool)->Void){
+        Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/public/api/register",method: .post, parameters: nil).responseJSON{
+            response in switch(response.result){
+            case .success:
+                print("Usuario guardado")
+                completion(true);
+                
+            case .failure(let error):
+                print("error del servidor")
+                completion(true) // Cuando funcione el servidor poner en false para evitar pasar a la pantalla home sin registro correcto//
+            }
+        }
+    }
+    
+    func postLogin(User : [String:String], completion: @escaping (Bool)->Void){
+        Alamofire.request("http://localhost:8888/BienestarDigital_BackEnd/bienestar_api/public/api/login",method: .post, parameters: nil).responseJSON{
+            response in switch(response.result){
+            case .success:
+                completion(true);
+                
+            case .failure(let error):
+                print("error del servidor")
+                completion(true) // Cuando funcione el servidor poner en false para evitar pasar a la pantalla home sin login correcto//
+            }
+        }
+    }
+    
+    /**
+     Funciones para datos hardcodeados si no hay coneion con el servidor
+     */
     func dataHardcoded()-> [TheApp]{
         var apps : [TheApp] = []
         apps.append(TheApp(name: "Clash Royale", latitude: 9.2, longitude: 4.5, time: "1Hy32M", imageURL: "clash_royale_app"))
