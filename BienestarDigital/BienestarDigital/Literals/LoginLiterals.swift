@@ -5,7 +5,9 @@
 //  Created by Loren on 10/02/2020.
 //  Copyright © 2020 Loren. All rights reserved.
 //
-
+/**
+ Literales de la aplicación
+ */
 import Foundation
 open class LoginLiterals{
     static var ButtonLogin = "Entrar"

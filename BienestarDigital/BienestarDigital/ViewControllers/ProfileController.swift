@@ -42,7 +42,9 @@ class ProfileController : UIViewController,CKCircleMenuDelegate{
         self.circleMenuView.delegate = self
         self.circleMenuView.openMenu()
     }
-    
+    /**
+     Guardar cambios al hacer click sobre el boton guardar cambios(Solo par el nombre de momento)
+     */
     @IBAction func saveChangesAction(_ sender: Any) {
         if(textName.text!.isEmpty){
             let alert = UIAlertController(title: "Atención", message: "El campo nombre no puede quedarse en blanco", preferredStyle: UIAlertController.Style.alert)
